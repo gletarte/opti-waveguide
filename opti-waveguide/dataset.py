@@ -1,11 +1,9 @@
 import numpy as np
 
-from os.path import join
+from os.path import join, abspath, dirname
 from os import listdir
 
-from itertools import groupby
-
-DATA_ROOT_PATH = join("..", "data")
+DATA_ROOT_PATH = join(dirname(abspath(__file__)), "..", "data")
 
 def load_dataset(identifiers, dates):
 	files_pairs = get_files_pairs(identifiers, dates)
